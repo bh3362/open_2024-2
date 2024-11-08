@@ -1,13 +1,13 @@
 #!/bin/sh
 
-# 인수가 "--reset"인 경우 DB.txt 초기화
+
 if [ "$1" = "--reset" ]; then
     > DB.txt
     echo "DB 초기화가 완료되었습니다."
     exit 0
 fi
 
-# 입력값을 그대로 DB.txt에 기록
+#DB.txt에 기록
 if [ $# -ge 1 ]; then
     entry="$*"
     echo "$entry" >> DB.txt
